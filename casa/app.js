@@ -1,10 +1,7 @@
-var express = require('express');
-var app = express();
-
-
-app.set('view engine', 'ejs');
+var app = require('./config/express')();
 
 app.get('/produtos', function(request, response) {
+    console.log('listando');
     response.render("produtos/lista");
 });
 
